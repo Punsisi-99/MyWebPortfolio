@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*-----------------------------------------Header section--------------------------------------------*/
+header{
+    padding: 15px 5%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(82, 48, 1, 0.774);
+    z-index: 100;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navlist{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+}
+
+.navlist li{
+    margin: 0 1rem;
+    font-size: 35px;
+}
+
+.navlist li a{
+    display: inline-flex;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist li a:hover, .navlist li a.active{
+    color: #ffcc24;
+    transform: scale(1.1);
+}
+
+header .logo{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+span{
+    color: rgb(226, 180, 30);
+}
+
+.menu-icon{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    /*background-color: #ffcc24;*/
+}
+
+.menu-icon .bar,
+.menu-icon::after,
+.menu-icon::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: #ffcc24;
+    margin: 6px 0;
+    transition: .4s;
+}
+
+.menu-icon.active::before{
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.menu-icon.active::after{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.menu-icon.active .bar{
+    opacity: 0;
+}
+
+/*-----------------------------------------End Header section--------------------------------------------*/
+
+/*-----------------------------------------Project section--------------------------------------------*/
+section{
+    padding: 0px 6%;
+    display: block;
+}
+
+.project{
+    position: relative;
+    min-height: 100vh;
+    margin-top: 10rem;
+}
+
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-text h2{
+    color: black ;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.fillter-btns{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3rem;
+}
+
+.fillter-btns button{
+    color: #ffcc24;
+    background-color: white ;
+    border: 2px solid #ffcc24;
+    font-size: 1.5rem;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0px 1px 2px 0 rgba(67, 65, 60, 0.3),
+                0px 2px 6px 2px rgba(67, 66, 60, 0.15);
+    margin-right: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.fillter-btns button:hover, button.mixitup-control-active{
+    color: black;
+    background-color: #ffcc24 ;
+}
+
+.fillter-btns a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 2px solid rgb(226, 180, 30);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: rgb(226, 180, 30);
+    margin: 0 1.5rem;
+    transition: .5s ease;
+}
+
+.fillter-btns a:hover{
+    background: #e2b41e;
+    color: white;
+    box-shadow: 0 0 1rem var(#e2b41e);
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.project-box{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: .5s ease;
+    border-radius: 3px;
+    height: 100%;
+}
+
+.project-box:hover, .img-layer a:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 1px 2px 0 rgba(67, 65, 60, 0.3),
+                0px 2px 6px 2px rgba(67, 66, 60, 0.15);
+
+}
+
+.project-content{
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+}
+
+img{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.project-box .img-layer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    flex-direction: row;
+    text-align: center;
+    padding:.5rem;
+    gap: 5rem;
+    background: #ffcc24;
+}
+
+.img-layer a{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 40%;
+    height: 100%;
+    padding: .5rem;
+    color: black;
+    transition: .5s ease;
+}
+
+.project-content h3{
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.project-content h3 span{
+    color: #ffb224;
+}
+
+.project-content .tech{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: rgb(85, 77, 77);
+}
+
+.project-content .tech p i{
+    text-decoration: underline;
+}
+
+.project-content p{
+    text-align: justify;
+    margin-top: 10px;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: rgb(85, 77, 77);
+
+}
+
+/*-----------------------------------------End Project section--------------------------------------------*/
+
+/*-----------------------------------------flyer section styling--------------------------------------------*/
+#flyers{
+    background: rgb(0, 0, 0);
+}
+
+.flyers{
+    position: relative;
+    min-height: 100vh;
+}
+
+.main-text{
+    position: relative;
+}
+
+.flyers .main-text h2{
+    color: rgb(255, 255, 255) !important;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: .5rem;
+    margin-top: 7rem;
+    text-decoration: underline;
+}
+
+.card-info{
+    padding-bottom: .5rem;
+}
+
+.card-info p{
+    color: rgb(128, 128, 128);
+    font-size: 1.5rem;
+    padding: 2px;
+    text-align: center;
+}
+
+.slider{
+    padding: .5rem !important;
+    width: 500px;
+    overflow: visible !important;
+}
+
+.slide-box{
+    padding: .5rem;
+    max-width: 600px;
+}
+
+.card{
+    margin-right: 10px !important;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    object-fit: cover;
+    border: 2px solid #ffb224;
+    padding: 10px;
+    display: block;
+    transition: .3s;
+}
+
+.swiper-pagination{
+    position: relative !important;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet{
+    height: 12px !important;
+    width: 12px !important;
+    border-radius: 25px !important;
+    background-color: #ffcc24 !important;
+}
+
+/*-----------------------------------------End flyer section styling--------------------------------------------*/
+
+/*-----------------------------------------3D section styling--------------------------------------------*/
+.videos{
+    background: black;
+    position: relative;
+    min-height: 90vh;
+}
+
+.videos-containor{
+    position: relative;
+}
+
+.videos-containor h2{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 7rem;
+    text-decoration: underline;
+}
+
+/*.videos-containor h2 i{
+    color: rgba(248, 81, 20, 0.842);
+}*/
+
+.videos-containor .card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.videos-containor .card .box{
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card video{
+    width: 500px;
+    max-width: 100vw;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/*-----------------------------------------end 3d section styling--------------------------------------------*/
+
+/*-----------------------------------------Blog section--------------------------------------------*/
+section{
+    padding: 0px 6%;
+    display: block;
+}
+
+.blogs{
+    position: relative;
+    min-height: 100vh;
+    margin-top: 10rem;
+}
+
+.main-text{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-text h2{
+    color: black;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.blogs-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.blogs-box{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: .5s ease;
+    border-radius: 3px;
+    height: 100%;
+    margin-top: 2rem;
+}
+
+.blogs-content:hover, .img-layer a:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 1px 2px 0 rgba(67, 65, 60, 0.3),
+                0px 2px 6px 2px rgba(67, 66, 60, 0.15);
+
+}
+
+.blogs-content{
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+
+img{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.blogs-box .img-layer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    flex-direction: row;
+    text-align: center;
+    padding:.5rem;
+    gap: 5rem;
+    background: #ffcc24;
+}
+
+.img-layer a{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 40%;
+    height: 100%;
+    padding: .5rem;
+    color: black;
+    transition: .5s ease;
+}
+
+.blogs-box .img-layer a i{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.blogs-content h3{
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.blogs-content h3 span{
+    color: #ffb224;
+}
+
+.blogs-content .tech{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: rgb(85, 77, 77);
+}
+
+.blogs-content .tech p i{
+    text-decoration: underline;
+}
+
+.blogs-content p{
+    text-align: justify;
+    margin-top: 10px;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: rgb(85, 77, 77);
+
+}
+
+/*-----------------------------------------End Blog section--------------------------------------------*/
+
+/*-----------------------------------------volunteering section--------------------------------------------*/
+.volunteer{
+    position: relative;
+    min-height: 100vh;
+}
+
+.volunteer .main-text{
+    padding: 10rem 2rem 1rem 2rem;
+}
+
+.volunteer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1rem;
+}
+
+.volunteer-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    padding: 5px;
+    height: 100%;
+}
+
+.volunteer-card{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
+    padding: 2px;
+    border-radius: 10px;
+
+}
+.volunteer-content{
+    color: rgb(0, 0, 0);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1px;
+}
+
+.volunteer-box .logo{
+    width: 100%;
+    padding: 1rem;
+}
+
+.volunteer-box .intro{
+    padding: 5px;
+}
+
+.volunteer-box .intro h3{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.intro h3 span{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: rgb(80, 80, 80);
+}
+
+.intro p{
+    color: rgb(80, 80, 80);
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    text-align: justify ;
+}
+
+video{
+    width: 200px;
+    object-fit: cover;
+    padding: 10px;
+    align-items: center;
+    left: 100px;
+}
+
+.volunteer-card .example{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*-----------------------------------------End volunteering section--------------------------------------------*/
+
+/*-----------------------------------------Certificates section--------------------------------------------*/
+.certificate{
+    position: relative;
+}
+
+.certificate .main-text{
+    padding: 10rem 2rem 1rem 2rem;;
+}
+
+.certificate-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.certificate-box{
+    position: relative;
+    display: flex;
+    padding: .5rem;
+    box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
+    border-radius: 3px;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.certificate-box img{
+    width: 100%;
+}
+
+.certificate-box .certificate-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.89);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    color: white;
+    transform: translateX(-100%);
+    transition: .5s;
+}
+
+.certificate-box:hover .certificate-layer{
+    transform: translate(0%);
+}
+
+.certificate-layer h3{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.certificate-layer h4{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.certificate-layer p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: justify;
+}
+
+
+
+/*-----------------------------------------End Certificates section--------------------------------------------*/
