@@ -385,7 +385,7 @@ section{
 /*-----------------------------------------Portfolio section style-----------------------------------------------*/
 .portfolio{
     background-color: #ffa60038;
-    min-height: 125vh;
+    min-height: 130vh;
     width: 100%;
 }
 
@@ -503,6 +503,77 @@ section{
 }
 /*-----------------------------------------End Portfolio section style-----------------------------------------------*/
 
+/*-----------------------------------------Skills & Education section style-----------------------------------------------*/
+
+.skillEducation{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.education{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.397);
+    box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.education .main-text h2{
+    color: black;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.main-text h3{
+    font-size: 2.1rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #00000059;
+    margin-bottom: 3rem;
+}
+
+.education-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.education-content .logo img{
+    width: 50px;
+}
+
+.education-content .details h3{
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.education-content .details h4{
+    font-size: 1.7rem;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+    padding: 10px;
+}
+
+.education-content .details p{
+    font-size: 1.5rem;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+    padding: 10px;
+}
+/*-----------------------------------------End Skills & Education section style-----------------------------------------------*/
 /*-----------------------------------------Responsive media--------------------------------------------*/
 @media (max-width: 1104px){
     .home .container{
