@@ -372,7 +372,7 @@ section{
     font-weight: 600;
 }
 
-.btn:hover{
+.about-btn .btn:hover{
     background-color: #ffcc24;
     color: white;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.19),
@@ -512,15 +512,16 @@ section{
     padding-top: 2rem;
 }
 
-.education{
-    width: 100%;
+.education, .container{
+    width: 500px;
+    height: 100%;
     background: rgba(255, 255, 255, 0.397);
     box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
     padding: 1rem;
     border-radius: 1rem;
 }
 
-.education .main-text h2{
+.education .main-text h2, .skills .main-text h2{
     color: black;
     font-size: 4rem;
     font-weight: 700;
@@ -544,7 +545,6 @@ section{
 
 .education-content{
     display: flex;
-    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
 }
@@ -557,21 +557,85 @@ section{
     font-size: 2rem;
     color: black;
     font-weight: bold;
-    padding: 10px;
+    padding: 0 10px 5px 10px;
 }
 
 .education-content .details h4{
     font-size: 1.7rem;
     color: rgb(61, 61, 61);
     font-weight: 600;
-    padding: 10px;
+    padding: 0 10px 5px 10px;
 }
 
 .education-content .details p{
     font-size: 1.5rem;
     color: rgb(61, 61, 61);
+    font-weight: 500;
+    padding: 0 10px 5px 10px;
+}
+
+.skills .fillter-btns{
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 300px;
+    margin: 35px auto;
+    border: 2px solid #ffcc24;
+    position: relative;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.fillter-btns button{
+    position: relative;
+    color: #ffcc24;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 12px;
     font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-box{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 130px;
+    height: 100%;
+    background: #ffcc24;
+    transition: .5s;
+}
+
+.fillter-btns button:hover, button.active{
+    color: white;
+    background-color: #ffcc24 ;
+}
+
+.tools{
     padding: 10px;
+    overflow: hidden;
+}
+
+.tool-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 3rem;
+    margin-left: 10px;
+}
+
+.tool-box img{
+    width: 50px;
+}
+
+.tool-box p{
+    font-size: 1.5rem;
+}
+
+.person{
+    
 }
 /*-----------------------------------------End Skills & Education section style-----------------------------------------------*/
 /*-----------------------------------------Responsive media--------------------------------------------*/

@@ -34,5 +34,15 @@ $(document).ready(function(){
             duration: 500
         }
     });
+
+    //skill filter
+    var mixer = mixitup('.tools',{
+        selectors: {
+            target: '.tool-box'
+        },
+        animation: {
+            duration: 500
+        }
+    });
      
 });
