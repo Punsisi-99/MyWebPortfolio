@@ -384,7 +384,7 @@ section{
 
 /*-----------------------------------------Portfolio section style-----------------------------------------------*/
 .portfolio{
-    background-color: #ffa60038;
+    background: linear-gradient(#ffa60038, #ffdc9a2d);
     min-height: 130vh;
     width: 100%;
 }
@@ -513,7 +513,7 @@ section{
 }
 
 .education, .skills .container{
-    width: 500px;
+    width: 550px;
     height: 100%;
     background: rgba(255, 255, 255, 0.397);
     box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
@@ -661,8 +661,65 @@ section{
 /*-----------------------------------------End Skills & Education section style-----------------------------------------------*/
 
 /*-----------------------------------------Gallery section style-----------------------------------------------*/
+.gallery{
+    margin-top: 3rem;
+    background: linear-gradient(#ffa60038, #ffdc9a2d);
+}
+
+.gallery h2{
+    color: black;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem 2rem 0 2rem;
+}
+
+.gallery h3{
+    font-size: 2.1rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #00000059;
+    margin-bottom: 3rem;
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.gallery-box .interest-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 10px;
+    align-items: center;
+}
+
+.interest-content h4{
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.gallery-box{
+    height: 100%;
+    
+}
+
+.gallery-content{
+    
+    padding: 10px;
+}
+
 .gallery-box img{
-    width: 25%;
+    width: 100%;
+    border-radius: 2rem;
+
+    
 }
 
 /*-----------------------------------------End Gallery section style-----------------------------------------------*/

@@ -33,5 +33,27 @@ $(document).ready(function(){
         animation: {
             duration: 500
         }
-    });  
+    }); 
+
 });
+
+const tools = document.querySelector(".tools");
+const personal = document.querySelector(".personal");
+const btn1 = document.querySelector("#btn-1");
+const btn2 = document.querySelector("#btn-2");
+
+    function techBtnClick(e){
+        btn1.classList.toggle("active");
+        btn2.classList.toggle("active");
+        tools.style.display = "block";
+        personal.style.display = "none";
+    }
+                                    
+    function profBtnClick(e){
+        btn1.classList.toggle("active");
+        btn2.classList.toggle("active");
+        tools.style.display = "none";
+        personal.style.display = "block";
+    }
+
+

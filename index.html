@@ -72,7 +72,7 @@
     <!--===========================================About me section========================================-->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="./Img/about_me.png" alt="My image in about me section" class="aboutMe">
+            <img src="./Img/about.png" alt="My image in about me section" class="aboutMe">
         </div>
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
@@ -102,9 +102,6 @@
     </section>
     <!--===========================================End About me section========================================-->
 
-    <!--===========================================Skills section========================================-->
-
-
     <!--===========================================End Skills section========================================-->
 
     <!--===========================================Portfolio section========================================-->
@@ -113,9 +110,9 @@
         <h3>__what I have done__</h3>
 
         <ul class="brief-content">
-            <li>Completed Project | <span class="pCount">0<i class='bx bx-plus'></i></span></li>
-            <li>Volunteering Experience | <span class="vCount">0<i class='bx bx-plus'></i></span></li>
-            <li>Certificates | <span class="cCount">0<i class='bx bx-plus'></i></span></li>
+            <li>Completed Project | <span class="pCount" data-target="10">0</span></li>
+            <li>Volunteering Experience | <span class="vCount" data-target="10">0<i class='bx bx-plus'></i></span></li>
+            <li>Certificates | <span class="cCount" data-target="10">0</span></li>
         </ul>
 
         <div class="portfolio-container">
@@ -256,46 +253,52 @@
                         <h3>__what I know__</h3>
                     </div>
                     <div class="fillter-btns">
-                        <div class="btn-box"></div>
-                            <button class="btn active" data-filter=".tech">Technical Skills</button>
-                            <button class="btn" data-filter=".person">Professional Skills</button>
+                        <!--<div class="btn-box"></div>-->
+                        <button id="btn-1" onclick="techBtnClick()" class="btn active" data-filter=".tech">Technical Skills</button>
+                        <button id="btn-2" onclick="profBtnClick()" class="btn" data-filter=".person">Professional Skills</button>
                     </div>
                     
                     <div class="techperson">
-                        <div class="tools">
-                            <div class="tool-box tech">
-                                 <img src="./Img/education/HTML.png" alt="">
-                                 <img src="./Img/education/css.png" alt="">
-                                 <img src="./Img/education/js.jpg" alt="">
-                                 <img src="./Img/education/Python.png" alt="">
-                                 <img src="./Img/education/php.jpg" alt="">
-                                 <img src="./Img/education/sql.jpg" alt="">
-                                 <img src="./Img/education/angular.jpg" alt="">
-                                 <img src="./Img/education/java.jpg" alt="">
-                                 <img src="./Img/education/ps.jpg" alt="">
-                                 <img src="./Img/education/ai.jpg" alt="">
-                                 <img src="./Img/education/Blender.png" alt="">
-                                 <img src="./Img/education/Canva.png" alt="">
-                                 <img src="./Img/education/Figma.png" alt="">
-                                 <img src="./Img/education/xd.jpg" alt="">
-                                 <img src="./Img/education/git.png" alt="">
-                                 <img src="./Img/education/Trello.png" alt="">
+                        <div class="box-content">
+                            <div class="tools">
+                                <div class="tool-box tech">
+                                     <img src="./Img/education/HTML.png" alt="">
+                                     <img src="./Img/education/css.png" alt="">
+                                     <img src="./Img/education/js.jpg" alt="">
+                                     <img src="./Img/education/Python.png" alt="">
+                                     <img src="./Img/education/php.jpg" alt="">
+                                     <img src="./Img/education/sql.jpg" alt="">
+                                     <img src="./Img/education/angular.jpg" alt="">
+                                     <img src="./Img/education/java.jpg" alt="">
+                                     <img src="./Img/education/ps.jpg" alt="">
+                                     <img src="./Img/education/ai.jpg" alt="">
+                                     <img src="./Img/education/Blender.png" alt="">
+                                     <img src="./Img/education/Canva.png" alt="">
+                                     <img src="./Img/education/Figma.png" alt="">
+                                     <img src="./Img/education/xd.jpg" alt="">
+                                     <img src="./Img/education/git.png" alt="">
+                                     <img src="./Img/education/colab.png" alt="">
+                                     <img src="./Img/education/jira.png" alt="">
+                                     <img src="./Img/education/Trello.png" alt="">
+                                 </div>
                              </div>
-                         </div>
+                        </div>
      
-                         <div class="personal">
-                             <div class="personal-box person">
-                                 <p>Communication Skills</p>
-                                 <p>Team Work</p>
-                                 <p>Leadership</p>
-                                 <p>Event managemnet</p>
-                                 <p>Creativity</p>
-                                 <p>Planing and Organizing</p>
-                                 <p>Negotiation</p>
-                                 <p>Public Speaking</p>
-                                 <p>Team Management</p>
-                                 <p>Problem Solving</p>
-                             </div>
+                         <div class="box-content">
+                            <div class="personal">
+                                <div class="personal-box person">
+                                    <p>Communication Skills</p>
+                                    <p>Team Work</p>
+                                    <p>Leadership</p>
+                                    <p>Event managemnet</p>
+                                    <p>Creativity</p>
+                                    <p>Planing and Organizing</p>
+                                    <p>Negotiation</p>
+                                    <p>Public Speaking</p>
+                                    <p>Team Management</p>
+                                    <p>Problem Solving</p>
+                                </div>
+                            </div>
                          </div>
                     </div>
                 </div>
@@ -309,15 +312,31 @@
 
 <section class="gallery" id="gallery">
     <h2 class="heading">Gallery</h2>
+    <h3>__see more__</h3>
 
     <div class="gallery-btns">
         <button class="btn mixitup-control-active" data-filter="all">All</button>
-        <button class="btn" data-filter="">Interest</button>
-        <button class="btn" data-filter="">Sports</button>
+        <button class="btn" data-filter=".interest">Interest</button>
+        <button class="btn" data-filter=".sport">Sports</button>
     </div>
 
-    <div class="gallery-container">
-        <div class="gallery-box">
+        <div class="interest interest">
+            <div class="interest-content">
+                <h4>AI/ML</h4>
+                <h4>Robotic</h4>
+                <h4>3D Design</h4>
+                <h4>Pencil Art</h4>
+                <h4>Dance</h4>
+                <h4>Acting</h4>
+                <h4>Travelling</h4>
+                <h4>Listening to Music</h4>
+                <h4>Reading Books</h4>
+                <h4>Look at trees</h4>
+            </div>
+        </div>
+
+        <div class="gallery-container">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/insloc.jpeg" alt="">
                 <div class="gallery-layer">
@@ -328,13 +347,13 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art11.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/travel.jpg" alt="">
                 <div class="gallery-layer">
@@ -343,7 +362,7 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/dance1.jpg" alt="">
                 <div class="gallery-layer">
@@ -353,7 +372,7 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/drama1.jpg" alt="">
                 <div class="gallery-layer">
@@ -363,47 +382,34 @@
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/art1.jpg" alt="">
-            </div>
-        </div>
-
-
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/insloc.jpg" alt="">
                 <div class="gallery-layer">
-                    <h4>IEEE Innovation Nation Sri Lanka Introduction Session</h4>
+                    <h4>IEEE Innovation Nation Sri Lanka Mini OC-2023</h4>
                     <p>At Sabaragamuwa University of Sri lanka</p>
                 </div>
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art4.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/insloc2.jpeg" alt="">
                 <div class="gallery-layer">
-                    <h4>IEEE Innovation Nation Sri Lanka Final</h4>
+                    <h4>IEEE Innovation Nation Sri Lanka Finals</h4>
                     <p>22nd of july</p>
                     <p>At Sabaragamuwa University of Sri lanka</p>
                 </div>
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/art5.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/image1.jpg" alt="">
                 <div class="gallery-layer">
@@ -414,13 +420,13 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art2.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/artigoOc.jpg" alt="">
                 <div class="gallery-layer">
@@ -431,19 +437,19 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art7.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art8.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/drama2.jpg" alt="">
                 <div class="gallery-layer">
@@ -453,7 +459,7 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/altereco.jpg" alt="">
                 <div class="gallery-layer">
@@ -464,32 +470,32 @@
         </div>
 
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/drama3.jpg" alt="">
                 <div class="gallery-layer">
-                    <h4>Street Drama Circle Event</h4>
+                    <h4>Pirihimbini Diyawara Event</h4>
                     <p>At Sabaragamuwa University of Sri lanka</p>
                 </div>
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art6.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/travel4.jpg" alt="">
                 <div class="gallery-layer">
-                    <p>At Pahanthudawa</p>
+                    <p>At Samanalawewa Dam</p>
                 </div>
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/bmi.jpg" alt="">
                 <div class="gallery-layer">
@@ -499,7 +505,7 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/dance2.jpg" alt="">
                 <div class="gallery-layer">
@@ -509,44 +515,19 @@
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art3.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/travel2.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/bmi2.jpeg" alt="">
-                <div class="gallery-layer">
-                    <h4>crafting Ceylon Exhibition</h4>
-                    <p>At BMICH</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/tevel5.jpg" alt="">
-                <div class="gallery-layer">
-                    <p>At Bambarakanda Waterfall</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art10.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix">
             <div class="gallery-content">
                 <img src="./Img/gallery/bmi3.jpg" alt="">
                 <div class="gallery-layer">
@@ -556,23 +537,13 @@
             </div>
         </div>
 
-        <div class="gallery-box">
-            <div class="gallery-content">
-                <img src="./Img/gallery/altereco1.jpg" alt="">
-                <div class="gallery-layer">
-                    <h4>AlterEco School Awareness </h4>
-                    <p>At R/Sivali Cental College</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/art9.jpg" alt="">
             </div>
         </div>
 
-        <div class="gallery-box">
+        <div class="gallery-box mix interest">
             <div class="gallery-content">
                 <img src="./Img/gallery/travel3.jpg" alt="">
                 <div class="gallery-layer">
@@ -581,7 +552,24 @@
             </div>
         </div>
 
+        <div class="gallery-box sport">
+            <div class="sport-content">
+                <div class="sport-box">
+                    <h3>Playing Karate</h3>
+                    <p>2022-Present</p>
+                </div>
 
+                <div class="sport-box">
+                    <h3>Was an Active Member of School Netballe Team</h3>
+                    <p>2013-2015</p>
+                </div>
+
+                <div class="sport-box">
+                    <h3>Played Athletic Games in School days</h3>
+                    <p>2011-2014</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
