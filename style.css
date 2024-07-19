@@ -618,6 +618,13 @@ section{
     display: block;
 }
 
+.tools p{
+    font-size: 1.5rem;
+    padding: 30px 0 0 10px;
+    font-weight: 600;
+    color: #4b4b4b;
+}
+
 .tool-box{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -682,7 +689,46 @@ section{
     margin-bottom: 3rem;
 }
 
+.gallery .gallery-btns{
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 350px;
+    margin: 35px auto;
+    border: 2px solid #ffcc24;
+    position: relative;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.gallery-btns button{
+    position: relative;
+    color: #ffcc24;
+    background: transparent;
+    border: none;
+    width: 110px;
+    font-size: 2rem;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s ease;
+    left: 0;
+    top: 0;
+}
+
+.gallery-btns button:hover, .gallery-btns button.active{
+    color: rgb(0, 0, 0);
+    background-color: #ffcc24 ;
+}
+
+
+
+
 .gallery-container{
+    height: 100%;
+}
+
+.gallery-box, .interest-box, .sport-box{
     display: grid;
     grid-template-columns: repeat(3, .5fr);
     align-items: center;
@@ -711,11 +757,11 @@ section{
 }
 
 .gallery-content{
-    
+    height: 100%;
     padding: 10px;
 }
 
-.gallery-box img{
+.gallery-content img{
     width: 100%;
     border-radius: 2rem;
 

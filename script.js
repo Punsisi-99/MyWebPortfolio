@@ -37,6 +37,7 @@ $(document).ready(function(){
 
 });
 
+//skill buttons
 const tools = document.querySelector(".tools");
 const personal = document.querySelector(".personal");
 const btn1 = document.querySelector("#btn-1");
@@ -56,4 +57,37 @@ const btn2 = document.querySelector("#btn-2");
         personal.style.display = "block";
     }
 
+//gallery buttons
+const galleryItems = document.querySelector(".galleryItems");
+const interestItem = document.querySelector(".interestItem");
+const sportItem = document.querySelector(".sportItem");
+const btn01 = document.querySelector("#btn-01");
+const btn02 = document.querySelector("#btn-02");
+const btn03 = document.querySelector("#btn-03");
 
+    function galleryBtnClick(e){
+        btn01.classList.toggle("active");
+        btn02.classList.toggle("active");
+        btn03.classList.toggle("active");
+        galleryItems.style.display = "block";
+        interestItem.style.display = "none";
+        sportItem.style.display = "none";
+    }
+                                    
+    function interestyBtnClick(e){
+        btn01.classList.toggle("active");
+        btn02.classList.toggle("active");
+        btn03.classList.toggle("active");
+        galleryItems.style.display = "none";
+        interestItem.style.display = "block";
+        sportItem.style.display = "none";
+    }
+
+    function sportBtnClick(e){
+        btn01.classList.toggle("active");
+        btn02.classList.toggle("active");
+        btn03.classList.toggle("active");
+        galleryItems.style.display = "none";
+        interestItem.style.display = "none";
+        sportItem.style.display = "block";
+    }
