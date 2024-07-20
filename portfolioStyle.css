@@ -631,6 +631,7 @@ video{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 .certificate-box{
@@ -753,3 +754,78 @@ video{
     font-weight: 500;
 }
 /*-----------------------------------------End Awards section--------------------------------------------*/
+
+/*-----------------------------------------Achievements section--------------------------------------------*/
+.achievement{
+    position: relative;
+}
+
+.achievement .main-text{
+    padding: 10rem 2rem 1rem 2rem;;
+}
+
+.achiev-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.achiev-content{
+    height: 100%;
+}
+
+.achiev-box{
+    position: relative;
+    display: flex;
+    padding: .5rem;
+    box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
+    border-radius: 3px;
+    transition: .5s ease;
+    overflow: hidden;
+}
+.achiev-box img{
+    width: 100%;
+}
+
+.achiev-box .achiev-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.89);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    color: white;
+    transform: translateX(-100%);
+    transition: .5s;
+}
+
+.achiev-box:hover .achiev-layer{
+    transform: translate(0%);
+}
+
+.achiev-layer h3{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.achiev-layer h4{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.achiev-layer p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: justify;
+}
+
+/*-----------------------------------------End Achievements section--------------------------------------------*/

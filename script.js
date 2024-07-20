@@ -66,27 +66,27 @@ const btn02 = document.querySelector("#btn-02");
 const btn03 = document.querySelector("#btn-03");
 
     function galleryBtnClick(e){
-        btn01.classList.toggle("active");
-        btn02.classList.toggle("active");
-        btn03.classList.toggle("active");
+        btn01.classList.add("active");
+        btn02.classList.remove("active");
+        btn03.classList.remove("active");
         galleryItems.style.display = "block";
         interestItem.style.display = "none";
         sportItem.style.display = "none";
     }
                                     
     function interestyBtnClick(e){
-        btn01.classList.toggle("active");
-        btn02.classList.toggle("active");
-        btn03.classList.toggle("active");
+        btn01.classList.remove("active");
+        btn02.classList.add("active");
+        btn03.classList.remove("active");
         galleryItems.style.display = "none";
         interestItem.style.display = "block";
         sportItem.style.display = "none";
     }
 
     function sportBtnClick(e){
-        btn01.classList.toggle("active");
-        btn02.classList.toggle("active");
-        btn03.classList.toggle("active");
+        btn01.classList.remove("active");
+        btn02.classList.remove("active");
+        btn03.classList.add("active");
         galleryItems.style.display = "none";
         interestItem.style.display = "none";
         sportItem.style.display = "block";
