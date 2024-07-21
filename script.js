@@ -195,3 +195,12 @@ function activeMenu(){
 
 activeMenu();
 window.addEventListener("scroll",activeMenu);
+
+//multiple text
+const typed = new Typed('.mutiple-text', {
+    strings: ['Web Developer', 'UI/UX Designer', 'Graphic Designer', '3D Designer', 'AI/ML Enthusiastic', 'Robotic Enthusiastic'],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:100,
+    loop:true
+});

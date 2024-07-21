@@ -186,18 +186,6 @@ section{
     animation-delay: 2s;
 }
 
-.change-text h3 span::before{
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: -3px;
-    width: 0;
-    height: 70%;
-    border-right: 3px solid #e2b41e;
-    animation: moveCursorText 4s linear infinite;
-    animation-delay: 2s ;
-}
-
 /*----------------------------@keyfram---------------------------------------------*/
 @keyframes moveText{
     0%,10%,100%{
