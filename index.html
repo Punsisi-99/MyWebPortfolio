@@ -110,8 +110,8 @@
         <h3>__what I have done__</h3>
 
         <ul class="brief-content">
-            <li>Completed Project | <span class="pCount" data-target="10">0</span></li>
-            <li>Volunteering Experience | <span class="vCount" data-target="10">0<i class='bx bx-plus'></i></span></li>
+            <li>Completed Projects | <span class="pCount" data-target="10">0</span></li>
+            <li>Volunteering Experiences | <span class="vCount" data-target="10">0<i class='bx bx-plus'></i></span></li>
             <li>Certificates | <span class="cCount" data-target="10">0</span></li>
         </ul>
 
@@ -632,13 +632,17 @@
 
         <div class="contact-box">
             <form action="#">
-                <input type="text" placeholder="Name *" required class="form-box">
-                <input type="email" placeholder=" Email *" required class="form-box">
-                <input type="text" placeholder="Contact Number *" required class="form-box">
-                <input type="text" placeholder="Subject *" required class="form-box">
-                <textarea name="Your Message" id="" cols="30" rows="10" class="form-box" placeholder="Your Message"></textarea>
+                <input type="text" id="name" placeholder="Name *" required class="form-box">
+                <input type="email" id="email" placeholder=" Email *" required class="form-box">
+                <input type="text" id="number" placeholder="Contact Number *" required class="form-box">
+                <input type="text" id="subject" placeholder="Subject *" required class="form-box">
+                <textarea name="Your Message" id="msg" cols="30" rows="8" class="form-box" placeholder="Your Message"></textarea>
                 <div class="fromBtn">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn" id="send" onclick="message()">Send Message</button>
+                </div>
+                <div class="message">
+                    <div class="success" id="success">Your Message Successfully Sent!</div>
+                    <div class="danger" id="danger">Error, Required Feilds can't be Empty!</div>
                 </div>
             </form>
         </div>
@@ -657,7 +661,7 @@
 </div>
 
 <!--===========================================End Contact section========================================-->
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
 </body>
 

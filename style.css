@@ -67,7 +67,6 @@ span{
 
 .menu-icon{
     position: relative;
-    display: block;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -79,6 +78,7 @@ span{
 .menu-icon::after,
 .menu-icon::before{
     content: "";
+    display: block;
     width: 100%;
     height: 4px;
     border-radius: 3px;
@@ -107,7 +107,7 @@ section{
 }
 
 .home{
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@ section{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: black ;
     opacity: .7;
     z-index: -1;
 }
@@ -301,7 +301,6 @@ section{
     justify-content: space-between;
     align-items: center;
     gap: 6rem;
-    margin-top: 20px;
 }
 
 .about .about-img{
@@ -578,7 +577,7 @@ section{
 .skills .fillter-btns{
     text-align: center;
     margin-bottom: 3rem;
-    width: 300px;
+    width: 300PX;
     margin: 35px auto;
     border: 2px solid #ffcc24;
     position: relative;
@@ -655,6 +654,11 @@ section{
 }
 
 .personal-box{
+    height: 100%;
+}
+
+.personal-box{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 1.5rem;
@@ -972,7 +976,49 @@ form .btn{
     box-shadow: 0px 2px 4px rgba(67, 65, 60, 0.3);
 }
 
+form .btn:hover{
+    box-shadow: 0px 2px 10px #ffcc24;
+}
 
+.message{
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.message .success{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: green;
+    position: absolute;
+    transition: .3s;
+    animation: button .4s linear;
+    display: none;
+}
+
+.message .danger{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: button .4s linear;
+    display: none;
+}
+
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 /*-----------------------------------------End Contact section style-----------------------------------------------*/
 
 /*-----------------------------------------footer style-----------------------------------------------*/
@@ -989,13 +1035,13 @@ footer{
 
 #progress{
     position: fixed;
-    background: #e2b41e ;
+    /*background: #e2b41e ;*/
     z-index: 1000;
     bottom: 110px;
     right: 20px;
     width: 50px;
     height: 50px;
-    display: grid;
+    display: none;
     place-items: center;
     border-radius: 50%;
     color: black;
@@ -1018,17 +1064,61 @@ footer{
 /*-----------------------------------------End footer style-----------------------------------------------*/
 
 /*-----------------------------------------Responsive media--------------------------------------------*/
-@media (max-width: 1104px){
-    .home .container{
-        margin-left: 8%;
+@media (max-width: 1200px){
+    html{
+        font-size: 60%;
+    }
+    .skill .education, .skill .container{
+        width: 100%;
+    }
+    .skills .fillter-btns{
+        width: 290px;
+    }
+
+}
+
+@media (max-width: 991px){
+    header,section,footer{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .about, .contactMe{
+        flex-direction: column;
+    }
+    .about .about-img .aboutMe{
+        width: 100%;
+    }
+    .gallery .sport-box-card{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+    .skillEducation{
+        flex-direction: column-reverse;
+    }
+    .skill .education, .skill .container{
+        width: 100%;
+    }
+    .skills .fillter-btns{
+        width: 290px;
+    }
+    .contact .contact-details{
+        width: 100%;
+    }
+    .portfolio-container, .gallery-box, .interest-box, .sport-box-card {
+        grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    }
+    .interestItem .interest-content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(100px, 1fr));
     }
 }
 
-@media (max-width: 940px){
-    
-}
-
-@media (max-width: 940px){
+@media (max-width: 768px){
+    .menu-icon .bar, .menu-icon::after, .main-icon::before{
+        display: block;
+    }
     .navbar{
         padding: 0 50px;
     }
@@ -1036,16 +1126,16 @@ footer{
         display: block;
         z-index: 999;
     }
-    .navbar .navlist{
-        position: fixed;
-        height: 100vh;
+    ul.navlist{
+        position: absolute;
         width: 100%;
         background: black;
-        left: 0;
+        left: -1000px;
         top: 0;
         text-align: center;
         display: inline-block;
         padding-top: 80px;
+        transition: all .3s ease;
     }
     .navbar .navlist li{
         display: block;
@@ -1054,4 +1144,10 @@ footer{
         margin: 20px 0;
         font-size: 25px;
     }
+    .navlist .active{
+        top: 100%;
+    }
+
+
 }
+
