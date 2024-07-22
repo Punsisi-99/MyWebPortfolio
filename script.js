@@ -31,7 +31,7 @@ $(document).ready(function () {
 
 //menubar icon
 let menuIcon = document.querySelector(".menu-icon");
-let navlist = document.querySelector(".navlist")
+let navlist = document.querySelector(".navlist");
 
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");
@@ -39,6 +39,12 @@ menuIcon.addEventListener("click", () => {
     document.body.classList.toggle("open");
 });
 
+//remove navlist
+navlist.addEventListener("click",()=>{
+    navlist.classList.remove("active");
+    menuIcon.classList.remove("active");
+    document.body.classList.remove("open");
+})
 
 //skill buttons
 const tools = document.querySelector(".tools");
@@ -204,3 +210,18 @@ const typed = new Typed('.mutiple-text', {
     backDelay:100,
     loop:true
 });
+
+//scroll
+ScrollReveal({ 
+    distance:"90px",
+    duration:2000,
+    delay:200,
+    //reset: true,
+});
+
+ScrollReveal().reveal('.main-text, .heading, .content', { origin:"top" });
+ScrollReveal().reveal('.about-img, .education, .gallery-btns, .details', { origin:"left" });
+ScrollReveal().reveal('.about-content, .contact-box, .skills', { origin:"right" });
+ScrollReveal().reveal('.home-image, footer, .portfolio-container, .gallery-box, .interest-box ', { origin:"bottom" });
+
+

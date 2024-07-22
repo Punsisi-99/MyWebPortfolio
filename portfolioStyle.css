@@ -268,13 +268,19 @@ img{
 /*-----------------------------------------End Project section--------------------------------------------*/
 
 /*-----------------------------------------flyer section styling--------------------------------------------*/
+.navbar{
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
 #flyers{
+    top: 0;
     background: rgb(0, 0, 0);
 }
 
 .flyers{
     position: relative;
-    min-height: 100vh;
 }
 
 .main-text{
@@ -287,7 +293,6 @@ img{
     font-weight: 700;
     text-align: center;
     padding: .5rem;
-    margin-top: 7rem;
     text-decoration: underline;
 }
 
@@ -304,7 +309,7 @@ img{
 
 .slider{
     padding: .5rem !important;
-    width: 500px;
+    width: 400px;
     overflow: visible !important;
 }
 
@@ -361,7 +366,6 @@ img{
     font-weight: 700;
     text-align: center;
     padding: 1rem;
-    margin-top: 7rem;
     text-decoration: underline;
 }
 
@@ -403,7 +407,7 @@ section{
 .blogs{
     position: relative;
     min-height: 100vh;
-    margin-top: 10rem;
+    
 }
 
 .main-text{
@@ -531,7 +535,7 @@ img{
 }
 
 .volunteer .main-text{
-    padding: 10rem 2rem 1rem 2rem;
+    padding: 2rem;
 }
 
 .volunteer-container{
@@ -623,7 +627,7 @@ video{
 }
 
 .certificate .main-text{
-    padding: 10rem 2rem 1rem 2rem;;
+    padding: 2rem;
 }
 
 .certificate-container{
@@ -694,7 +698,7 @@ video{
 }
 
 .awards .main-text{
-    padding: 10rem 2rem 1rem 2rem;
+    padding: 2rem;
 }
 
 .awards-container{
@@ -761,7 +765,7 @@ video{
 }
 
 .achievement .main-text{
-    padding: 10rem 2rem 1rem 2rem;;
+    padding: 2rem;
 }
 
 .achiev-container{
@@ -835,9 +839,86 @@ video{
     html{
         font-size: 60%;
     }
-
-    .project-container{
+    .project-container, .blogs-container, .volunteer-container, .certificate-container, .awards-container, .achiev-container{
         grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
     }
+    .navbar {
+        position: relative;
+    }
+    .flyers .main-text h2 {
+        margin-top: 0;
+    }
+    .slider {
+        padding: .2rem !important;
+        width: 300px;
+        overflow: visible !important;
+    }
+    .swiper-pagination-bullet{
+        height: 10px !important;
+        width: 10px !important;
+    }
+    .videos-containor .card{
+        grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+    }
+    .videos-containor .card .box{
+        width: 100%;
+    }
+    .blogs{
+        margin-top: 1rem;
+    }
 
+}
+@media (max-width: 991px){
+    .fillter-btns button{
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+    .fillter-btns a{
+        margin: 10px;
+    }
+    .slider {
+        padding: .2rem !important;
+        width: 200px;
+        overflow: visible !important;
+    }
+    .swiper-pagination-bullet{
+        height: 8px !important;
+        width: 8px !important;
+    }
+    .videos-containor .card{
+        grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 60%;
+    }
+    .fillter-btns button{
+        padding: 10px;
+        font-size: .8rem;
+    }
+    .fillter-btns a{
+        margin: 10px;
+    }
+    .videos-containor .card{
+        grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 530px){
+    .fillter-btns{
+        display: grid;
+        grid-gap: 1rem;
+        font-size: 2rem;
+    }
+    .fillter-btns button{
+        padding: 13px;
+        width: 100%;
+    }
+    .fillter-btns a{
+        align-items: center;
+        font-size: 2rem;
+        margin: 10px;
+    }
 }
