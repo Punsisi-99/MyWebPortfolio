@@ -222,6 +222,6 @@ ScrollReveal({
 ScrollReveal().reveal('.main-text, .heading, .content', { origin:"top" });
 ScrollReveal().reveal('.about-img, .education, .gallery-btns, .details', { origin:"left" });
 ScrollReveal().reveal('.about-content, .contact-box, .skills', { origin:"right" });
-ScrollReveal().reveal('.home-image, footer, .portfolio-container, .gallery-box, .interest-box ', { origin:"bottom" });
+ScrollReveal().reveal('.home-image, footer, .portfolio-container', { origin:"bottom" });
 
 
