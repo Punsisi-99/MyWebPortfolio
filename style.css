@@ -1155,6 +1155,7 @@ footer{
         transition: all .3s ease;
     }
     .navbar .navlist li{
+        width: 100%;
         display: block;
     }
     .navlist a{
@@ -1191,7 +1192,10 @@ footer{
     }
     
     .skills .fillter-btns{
-        width: 250px;
+        width: 243px;
+    }
+    .skills .fillter-btns button{
+        font-size: 1.2rem;
     }
     .gallery .sport-box-card{
         padding-left: 4%;
@@ -1204,6 +1208,9 @@ footer{
     html{
         font-size: 70%;
     }
+    #home h2, #home h1{
+        font-size: 2rem;
+    }
     section{
         padding: 50px 3%;
     }
@@ -1213,7 +1220,29 @@ footer{
         grid-template-columns: repeat(auto-fill,minmax(100px, 1fr));
     }
     .skills .fillter-btns{
-        width: 330px;
+        width: 240px;
+    }
+    .skills .fillter-btns button{
+        font-size: 1rem;
+    }
+    .tool-box img{
+        width: 40px;
+    }
+    .gallery .gallery-btns{
+        width: 250px;
+    }
+    .gallery-btns button{
+        font-size: 1.5rem;
+        width: 80px;
+    }
+    .sport-content{
+        grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    }
+    .sport-box-card h3{
+        font-size: 1.5rem;
+    }
+    .details h3, .details h4{
+        font-size: 1rem;
     }
 }
 

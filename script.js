@@ -203,7 +203,7 @@ activeMenu();
 window.addEventListener("scroll",activeMenu);
 
 //multiple text
-const typed = new Typed('.mutiple-text', {
+const typed = new Typed('.multiple-text', {
     strings: ['Web Developer', 'UI/UX Designer', 'Graphic Designer', '3D Designer', 'AI/ML Enthusiastic', 'Robotic Enthusiastic'],
     typeSpeed:100,
     backSpeed:100,
@@ -222,6 +222,6 @@ ScrollReveal({
 ScrollReveal().reveal('.main-text, .heading, .content', { origin:"top" });
 ScrollReveal().reveal('.about-img, .education, .gallery-btns, .details', { origin:"left" });
 ScrollReveal().reveal('.about-content, .contact-box, .skills', { origin:"right" });
-ScrollReveal().reveal('.home-image, footer, .portfolio-container', { origin:"bottom" });
+ScrollReveal().reveal('.home-image, .portfolio-container', { origin:"bottom" });
 
 

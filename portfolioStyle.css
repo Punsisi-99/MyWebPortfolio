@@ -106,7 +106,6 @@ section{
 .project{
     position: relative;
     min-height: 100vh;
-    margin-top: 10rem;
 }
 
 .main-text{
@@ -118,6 +117,7 @@ section{
 .main-text h2{
     color: black ;
     font-size: 4rem;
+    padding: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
@@ -263,6 +263,13 @@ img{
     font-weight: 500;
     color: rgb(85, 77, 77);
 
+}
+
+.project-content .tech p a i{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(85, 77, 77);
 }
 
 /*-----------------------------------------End Project section--------------------------------------------*/
